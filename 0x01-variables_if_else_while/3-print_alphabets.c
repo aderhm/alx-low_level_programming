@@ -13,13 +13,13 @@ int main(void)
 	while (i <= 'z')
 	{
 		putchar(i++);
-	}
+		
+		if (i == 123)
+			i = 65;
+		
+		if (i == 91)
+			break;
 
-	i = 65;
-
-	while (i <= 'Z')
-	{
-		putchar(i++);
 	}
 
 	putchar('\n');
