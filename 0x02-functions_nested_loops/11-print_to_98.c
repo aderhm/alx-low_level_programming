@@ -31,9 +31,9 @@ void print_to_98(int n)
 			n--;
 		}
 	}
-    else
-    {
-        printf("%i", n);
-    }
-	_putchar('\n');
+	else
+	{
+		printf("%i", n);
+	}
+	printf("\n");
 }
