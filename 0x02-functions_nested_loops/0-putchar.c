@@ -12,7 +12,7 @@ int main(void)
 {
     unsigned int i = 0;
     char str[] = "_putchar";
-    
+
     while (i < strlen(str))
     {
         _putchar(str[i]);
@@ -20,6 +20,6 @@ int main(void)
     }
 
     _putchar('\n');
-    
+
     return (0);
 }
