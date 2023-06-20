@@ -6,34 +6,43 @@
  *
  * Return: void.
  **/
-void print_times_table(int n) {
+void print_times_table(int n)
+{
 	int i = 0, j, prod;
 
 	if (n < 0 || n > 15)
 		return;
 
-	while (i <= n) {
+	while (i <= n)
+	{
 		j = 0;
-		while (j <= n) {
+		while (j <= n)
+		{
 			prod = i * j;
-			if (prod < 10) {
-				if (j != 0) {
+			if (prod < 10)
+			{
+				if (j != 0)
+				{
 					_putchar(' ');
 					_putchar(' ');
 				}
 				_putchar(prod + '0');
 			}
-			else if (prod < 100) {
+			else if (prod < 100)
+			{
 				_putchar(' ');
 				_putchar((prod / 10) + '0');
 				_putchar((prod % 10) + '0');
-			} else {
+			}
+			else
+			{
 				_putchar((prod / 100) + '0');
 				_putchar(((prod / 10) % 10) + '0');
 				_putchar((prod % 10) + '0');
 			}
 
-			if (j != n) {
+			if (j != n)
+			{
 				_putchar(',');
 				_putchar(' ');
 			}
