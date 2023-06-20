@@ -10,33 +10,33 @@ void print_times_table(int n)
 {
 	int i = 0, j, prod;
 
-	if (n < 0 || n > 15) return;
+	if (n < 0 || n > 15)
+		return;
 	while (i <= n)
 	{
 		j = 0;
 		while (j <= n)
 		{
-			prod = i * j;
-			if (prod < 10)
+			if ((i * j) < 10)
 			{
 				if (j != 0)
 				{
 					_putchar(' ');
 					_putchar(' ');
 				}
-				_putchar(prod + '0');
+				_putchar((i * j) + '0');
 			}
-			else if (prod < 100)
+			else if ((i * j) < 100)
 			{
 				_putchar(' ');
-				_putchar((prod / 10) + '0');
-				_putchar((prod % 10) + '0');
+				_putchar(((i * j) / 10) + '0');
+				_putchar(((i * j) % 10) + '0');
 			}
 			else
 			{
-				_putchar((prod / 100) + '0');
-				_putchar(((prod / 10) % 10) + '0');
-				_putchar((prod % 10) + '0');
+				_putchar(((i * j) / 100) + '0');
+				_putchar((((i * j) / 10) % 10) + '0');
+				_putchar(((i * j) % 10) + '0');
 			}
 			if (j != n)
 			{
