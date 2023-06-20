@@ -10,9 +10,7 @@ void print_times_table(int n)
 {
 	int i = 0, j, prod;
 
-	if (n < 0 || n > 15)
-		return;
-
+	if (n < 0 || n > 15) return;
 	while (i <= n)
 	{
 		j = 0;
