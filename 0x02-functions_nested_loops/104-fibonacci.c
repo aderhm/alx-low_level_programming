@@ -16,7 +16,7 @@ int main(void)
 	while (i < 96)
 	{
 		fib = a + b;
-		printf("%I64lu", fib);
+		printf("%I64d", fib);
 		a = b;
 		b = fib;
 
