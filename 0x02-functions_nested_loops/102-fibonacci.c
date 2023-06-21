@@ -8,15 +8,15 @@
 int main(void)
 {
 	int i = 0;
-	int a = 1, b = 2, fib;
+	long int a = 1, b = 2, fib;
 
-	printf("%i, ", a);
-	printf("%i, ", b);
+	printf("%li, ", a);
+	printf("%li, ", b);
 
 	while (i < 48)
 	{
 		fib = a + b;
-		printf("%i", fib);
+		printf("%li", fib);
 		a = b;
 		b = fib;
 
