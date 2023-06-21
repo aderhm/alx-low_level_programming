@@ -10,8 +10,8 @@ int main(void)
 	int i = 0;
 	long long int a = 1, b = 2, fib;
 
-	printf("%i, ", a);
-	printf("%i, ", b);
+	printf("%lli, ", a);
+	printf("%lli, ", b);
 
 	while (i < 48)
 	{
