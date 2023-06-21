@@ -8,14 +8,14 @@
 int main(void)
 {
 	int i = 0;
-	int a = 1, b = 2, fib;
+	unsigned long int a = 1, b = 2, fib;
 
-	printf("%d, %d, ", a, b);
+	printf("%lu, %lu, ", a, b);
 
 	while (i < 96)
 	{
 		fib = a + b;
-		printf("%d", fib);
+		printf("%lu", fib);
 		a = b;
 		b = fib;
 
