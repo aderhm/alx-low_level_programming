@@ -8,7 +8,7 @@
 int main(void)
 {
     
-    unsigned long int n = 612852475143L;
+    unsigned long int n = 612852475143;
 
 	
 	printf("%lu\n", n);
