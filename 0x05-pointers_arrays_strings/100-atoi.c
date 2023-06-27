@@ -36,7 +36,7 @@ int _atoi(char *s)
 		i++;
 	}
 
-	printf("%s\n", str);
+	printf("%s\n", s);
 
 	while (--i > 0)
 	{
