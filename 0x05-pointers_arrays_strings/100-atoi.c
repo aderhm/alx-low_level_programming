@@ -10,13 +10,11 @@
  */
 int _atoi(char *s)
 {
-	int i;
 	unsigned int converted_value = 0;
 	int sign = 1;
 	int u = 1;
 
-	i = 0;
-	while (i != '\0')
+	while (*s++)
 	{
 		if (*s == '-')
 		{
