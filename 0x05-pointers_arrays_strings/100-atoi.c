@@ -10,36 +10,26 @@
  */
 int _atoi(char *s)
 {
-    int i;
 	unsigned int converted_value = 0;
 	int sign = 1;
-	/*int u = 1;*/
 
-    i = 0;
 	do
 	{
 		if (*s == '-')
 		{
 			sign *= -1;
-			*s = '*';
 		}
 		else if (*s == '+')
 		{
 			sign *= 1;
-			*s = '*';
 		}
-		else if (*s < '0' || *s > '9')
+		else if (*s >= '0' && *s <= '9')
 		{
-			*s = '*';
+			converted_value = (converted_value * 10) + (*s - '0');
 		}
 
 		i++;
 	} while (*s++);
-
-	printf("%s\n", s);
-
-    
-
 
 	return (sign * converted_value);
 }
