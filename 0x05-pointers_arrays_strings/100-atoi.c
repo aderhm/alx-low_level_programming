@@ -16,7 +16,7 @@ int _atoi(char *s)
 	int u = 1;
 
     i = 0;
-	while (*s++)
+	do
 	{
 		if (*s == '-')
 		{
@@ -34,7 +34,7 @@ int _atoi(char *s)
 		}
 
 		i++;
-	}
+	} while (*s++);
 
 	printf("%s\n", s);
 
