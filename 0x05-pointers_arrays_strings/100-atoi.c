@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * _atoi - Convert a string to an integer.
@@ -9,39 +12,46 @@
 int _atoi(char *s)
 {
 	int i;
-    int converted_value = 0;
-    int sign = 1;
-    int u = 1;
+	int converted_value = 0;
+	int sign = 1;
+	int u = 1;
+	char *str = malloc(strlen(s) + 1);
+	strcpy(str, s);
 
-    i = 0;
-    while (i != '\0')
-    {
-        if (s[i] == '-')
-        {
-            sign *= -1;
-            s[i] = '*';
-        }
-        else if (s[i] == '+')
-        {
-            sign *= 1;
-            s[i] = '*';
-        }
-        else if (s[i] < 48 || s[i] > 57)
-        {
-            s[i] = '*';
-        }
-        
-        i++;
-    }
-    
-    while (--i > 0)
-    {
-        if (s[i] != '*')
-        {
-            converted_value += s[i] * u;
-            u *= 10;
-        }
-    }
+	i = 0;
+	while (i != '\0')
+	{
+		if (str[i] == '-')
+		{
+			sign *= -1;
+			str[i] = '*';
+		}
+		else if (s[i] == '+')
+		{
+			sign *= 1;
+			str[i] = '*';
+		}
+		else if (s[i] < 48 || s[i] > 57)
+		{
+			str[i] = '*';
+		}
 
-    return (sign * converted_value);
+		i++;
+	}
+
+	printf("%s\n", str);
+
+	while (--i > 0)
+	{
+		if (str[i] != '*')
+		{
+			converted_value += str[i] * u;
+			u *= 10;
+		}
+	}
+
+	free(str);
+
+	return (sign * converted_value);
 }
+
