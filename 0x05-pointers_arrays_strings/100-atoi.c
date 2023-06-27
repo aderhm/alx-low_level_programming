@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
  * _atoi - Convert a string to an integer.
@@ -18,10 +16,6 @@ int _atoi(char *s)
 		if (*s == '-')
 		{
 			sign *= -1;
-		}
-		else if (*s == '+')
-		{
-			sign *= 1;
 		}
 		else if (*s >= '0' && *s <= '9')
 		{
