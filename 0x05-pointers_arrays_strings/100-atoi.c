@@ -27,8 +27,6 @@ int _atoi(char *s)
 		{
 			converted_value = (converted_value * 10) + (*s - '0');
 		}
-
-		i++;
 	} while (*s++);
 
 	return (sign * converted_value);
