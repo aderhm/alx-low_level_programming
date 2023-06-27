@@ -11,8 +11,7 @@ int _atoi(char *s)
 	unsigned int converted_value = 0;
 	int sign = 1;
 
-	do
-	{
+	do {
 		if (*s == '-')
 		{
 			sign *= -1;
@@ -21,6 +20,10 @@ int _atoi(char *s)
 		{
 			converted_value = (converted_value * 10) + (*s - '0');
 		}
+        else if (converted_value > 0)
+        {
+            break;
+        }
 	} while (*s++);
 
 	return (sign * converted_value);
