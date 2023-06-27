@@ -13,7 +13,7 @@ int _atoi(char *s)
     int i;
 	unsigned int converted_value = 0;
 	int sign = 1;
-	int u = 1;
+	/*int u = 1;*/
 
     i = 0;
 	do
@@ -38,15 +38,7 @@ int _atoi(char *s)
 
 	printf("%s\n", s);
 
-    i -= 1;
-	while (--i >= 0)
-	{
-		if (*s != '*')
-		{
-			converted_value += *s * u;
-			u *= 10;
-		}
-	}
+    
 
 
 	return (sign * converted_value);
