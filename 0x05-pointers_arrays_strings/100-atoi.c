@@ -38,7 +38,8 @@ int _atoi(char *s)
 
 	printf("%s\n", s);
 
-	while (--i > 0)
+    i -= 1;
+	while (--i >= 0)
 	{
 		if (*s != '*')
 		{
