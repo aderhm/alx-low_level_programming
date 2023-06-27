@@ -40,15 +40,13 @@ int _atoi(char *s)
 
 	while (--i > 0)
 	{
-		if (str[i] != '*')
+		if (*s != '*')
 		{
-			converted_value += str[i] * u;
+			converted_value += *s * u;
 			u *= 10;
 		}
 	}
 
-	free(str);
 
 	return (sign * converted_value);
 }
-
