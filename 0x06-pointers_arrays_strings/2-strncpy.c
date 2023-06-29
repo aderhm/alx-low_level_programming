@@ -22,12 +22,12 @@ char *_strncpy(char *dest, char *src, int n)
 	i = 0;
 	while (i < n)
 	{
-        if (i > srclen)
-            dest[i] = 0x00;
+		if (i > srclen)
+			dest[i] = 0x00;
 		else
-            dest[i] = src[i];
-		
-        i++;
+			dest[i] = src[i];
+
+		i++;
 	}
 
 	return (dest);
