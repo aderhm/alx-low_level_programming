@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /**
  * _strncat - Concatenates two strings.
  * @src: The source sting
