@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /**
  * _strncpy - Copies a string.
  * @src: The source sting
