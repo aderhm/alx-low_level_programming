@@ -1,5 +1,3 @@
-#include <unistd.h>
-
 /**
  * _strcat - Concatenates two strings.
  * @src: The source sting
