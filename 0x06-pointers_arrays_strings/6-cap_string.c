@@ -13,9 +13,6 @@ char *cap_string(char *s)
 	{
 		if (s[i] == ' ' || s[i] == '.' || s[i] == '\n' || s[i] == '\t')
 		{
-			if (s[i] == '\t')
-				s[i] = ' ';
-
 			if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
 				s[i + 1] -= 32;
 		}
