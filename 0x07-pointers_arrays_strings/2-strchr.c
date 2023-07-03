@@ -1,5 +1,3 @@
-#include <stdlib.h>
-
 /**
  * _strchr - Locates a character in a string.
  * @s: The string.
@@ -23,7 +21,7 @@ char *_strchr(char *s, char c)
 	}
 
 	if (s[i] == '\0')
-		return (NULL);
+		return ('\0');
 
 	ss = &s[i];
 
