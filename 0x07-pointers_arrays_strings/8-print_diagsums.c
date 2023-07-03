@@ -11,23 +11,14 @@
 void print_diagsums(int *a, int size)
 {
 	int i;
-	int *fsum = a;
-	int *bsum = a;
+	int fsum = 0;
+	int bsum = 0;
 
-	for (i = 0; i < size; i++)
-	{
-        a = a + ( i * size + i) * 4;
-        printf("%d, ", *a);
-		fsum += *a;
-	}
+	for (i = 0; i < size * size; i += (size + 1))
+        fsum += a[i];
 
-    a = bsum;
-	for (i = size; i > 0; i--)
-	{
-        a = a + ( i * size + i) * 4;
-        printf("%d, ", *a);
-		bsum += *a;
-	}
+	for (i = size - 1; i <= size * (size - 1); i += (size - 1))
+        bsum += a[i];
 
-	/* printf("%d, %d\n", *fsum, *bsum); */
+	printf("%d, %d\n", fsum, bsum);
 }
