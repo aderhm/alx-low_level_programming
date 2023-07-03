@@ -2,11 +2,9 @@
 
 /**
  * print_chessboard - Prints the chessboard.
- * @haystack: The string to search in.
- * @needle: the substring to find.
+ * @a: 2D Array.
  *
- * Return: A pointer tothe beginning of the located substring.
- * And NULL if the substring is not found.
+ * Return: void.
  */
 void print_chessboard(char (*a)[8])
 {
