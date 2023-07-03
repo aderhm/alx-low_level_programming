@@ -3,3 +3,4 @@
 /*.exe
 /0-memset
 /8-print_diagsums
+/1-memcpy
