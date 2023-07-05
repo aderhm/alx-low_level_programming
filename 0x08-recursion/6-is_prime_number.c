@@ -3,20 +3,20 @@
 /**
  * is_prime - Checks if a given number is a prime number.
  * @n: input number.
- * @c: iterator.
+ * @i: iterator.
  * Return: 1 if @n is a prime number,
  * Otherwise, 0 is returned.
  */
-int is_prime(unsigned int n, unsigned int c)
+int is_prime(unsigned int n, unsigned int i)
 {
-	if (n % c == 0)
+	if (n % i == 0)
 	{
-		if (n == c)
+		if (n == i)
 			return (1);
 		else
 			return (0);
 	}
-	return (is_prime(n, c + 1));
+	return (is_prime(n, i + 1));
 }
 
 /**
