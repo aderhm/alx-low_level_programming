@@ -1,5 +1,22 @@
 #include "main.h"
-#include <stdio.h>
+
+/**
+ * power - Returns the natural square root of a number.
+ * @n: input number.
+ * @i: iterator.
+ * Return: square root of @n or -1.
+ */
+int power(int n, int i)
+{
+	if (i % (n / i) == 0)
+	{
+		if (i * (n / i) == n)
+			return (i);
+		else
+			return (-1);
+	}
+	return (0 + power(n, i + 1));
+}
 
 /**
  * _sqrt_recursion - Returns the natural square root of a number.
@@ -9,15 +26,14 @@
  */
 int _sqrt_recursion(int n)
 {
-	int x = n;
-
 	if (n < 0)
 		return (-1);
 
-	if (x * x == n)
-		return (x);
+	if (n == 0)
+		return (0);
 
-	x = (x + (n / x)) / 2;
+	if (n == 1)
+		return (1);
 
-	return (_sqrt_recursion(x));
+	return (power(n, 2));
 }
