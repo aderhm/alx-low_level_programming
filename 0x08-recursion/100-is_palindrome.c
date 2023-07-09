@@ -15,7 +15,7 @@ int is_palindrome_helper(char *s, int len, int half)
 	if (*s != *(s + len - 1))
 		return (0);
 
-	if (len <= half)
+	if (len < half)
 		return (1);
 
 	s++;
