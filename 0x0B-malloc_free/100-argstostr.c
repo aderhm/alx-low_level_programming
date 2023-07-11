@@ -20,6 +20,7 @@ char *argstostr(int ac, char **av)
 		size += strlen(av[sc]);
 		sc++;
 	}
+	size += (ac - 1);
 
 	if (ac == 0 && *av == NULL)
 		return (NULL);
