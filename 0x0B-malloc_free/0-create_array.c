@@ -11,6 +11,7 @@
  */
 char *create_array(unsigned int size, char c)
 {
+	unsigned int i;
 	char *a;
 
 	if (size == 0)
@@ -21,7 +22,10 @@ char *create_array(unsigned int size, char c)
 	if (a == NULL)
 		return (NULL);
 
-	*a = c;
+	for (i = 0; i < size; i++)
+	{
+		a[i] = c;
+	}
 
 	return (a);
 }
