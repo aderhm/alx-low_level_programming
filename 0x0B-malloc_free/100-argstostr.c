@@ -10,9 +10,16 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int c, i, j;
+	int c, i, j, sc;
 	char *str;
-	int size = (ac - 3) * strlen(*av);
+	int size = 0;
+
+	sc = 0;
+	while (sc < ac)
+	{
+		size += strlen(av[sc]);
+		sc++;
+	}
 
 	if (ac == 0 && *av == NULL)
 		return (NULL);
