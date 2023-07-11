@@ -15,7 +15,7 @@ char *argstostr(int ac, char **av)
 	int size = 0;
 
 	sc = 0;
-	while (sc <= ac)
+	while (sc < ac)
 	{
 		size += strlen(av[sc]);
 		sc++;
