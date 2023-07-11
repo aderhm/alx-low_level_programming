@@ -14,7 +14,7 @@ char *argstostr(int ac, char **av)
 	char *str;
 	int size = (ac - 3) * strlen(*av);
 
-	if (ac == 0)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 
 	str = (char *)malloc(size * sizeof(char));
