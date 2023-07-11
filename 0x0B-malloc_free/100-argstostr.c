@@ -12,9 +12,9 @@ char *argstostr(int ac, char **av)
 {
 	int c, i, j;
 	char *str;
-	int size = (ac - 1) * (strlen(*av) - 1);
+	int size = (ac - 3) * strlen(*av);
 
-	if (ac == 0 || *av == NULL)
+	if (ac == 0)
 		return (NULL);
 
 	str = (char *)malloc(size * sizeof(char));
