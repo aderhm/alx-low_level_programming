@@ -7,8 +7,7 @@
  * @separator: the string to be printed between numbers,
  * @n: the number of integers passed to the function.
  *
- * Return: @sum of the params.
- * If n == 0, return 0
+ * Return: void.
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
