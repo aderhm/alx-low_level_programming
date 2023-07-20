@@ -13,6 +13,7 @@
  */
 int main(int ac, char **av)
 {
+	int (*func)(int, int);
 	int res, a, b;
 
 	if (ac != 4)
@@ -23,14 +24,15 @@ int main(int ac, char **av)
 
 	a = atoi(av[1]);
 	b = atoi(av[3]);
+	func = get_op_func(av[2]);
 
-	res = get_op_func(av[2])(a, b);
-
-	if (!res)
+	if (!func)
 	{
 		printf("Error\n");
 		exit(99);
 	}
+
+	res = func(a, b);
 
 	if (res == 100)
 	{
