@@ -10,7 +10,7 @@
  * Return: a pointer to the function that corresponds to
  * the operator given as a parameter.
  */
-int (*get_op_func(char *s))(int, int)
+int (*get_op_func(char *s))(int a, int b)
 {
 	op_t ops[] = {
 		{"-", op_sub},
@@ -25,11 +25,11 @@ int (*get_op_func(char *s))(int, int)
 	i = 0;
 	while (i < 5)
 	{
-		if (strcmp (ops[i].op, s))
+		if (strcmp(ops[i].op, s) == 0)
 			return (ops[i].f);
 
 		i++;
 	}
 
-	return (ops[i].f);
+	return (NULL);
 }
