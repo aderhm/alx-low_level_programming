@@ -26,8 +26,6 @@ int main(int ac, char **av)
 
 	res = get_op_func(av[2])(a, b);
 
-	printf("%d\n", res);
-
 	if (!res)
 	{
 		printf("Error\n");
