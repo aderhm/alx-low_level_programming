@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * listint_len - adds a new node at the beginning of a listint_t list.
+ * add_nodeint - adds a new node at the beginning of a listint_t list.
  * @head: The list to check,
  * @n: the element to insert in the created node.
  *
