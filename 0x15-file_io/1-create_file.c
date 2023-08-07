@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * create_file - creates a file.
@@ -13,17 +13,25 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	FILE *file;
+	int oopen, wwrite, length;
 
 	if (!filename)
 		return (-1);
 
-	file = fopen(filename, "w");
-	if (!file)
+	length = 0;
+	if (text_content)
+	{
+		while (text_content[length])
+			length++;
+	}
+
+	oopen = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	wwrite = write(oopen, text_content, length);
+
+	if (oopen == -1 || wwrite == -1)
 		return (-1);
 
-	fprintf(file, "%s", text_content);
-	fclose(file);
+	close(oopen);
 
 	return (1);
 }
