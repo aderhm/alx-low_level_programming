@@ -16,11 +16,10 @@ void close_fd(int fd)
 
 	if (cls == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
-
 
 /**
  * main - copies the content of a file to another file.
@@ -36,7 +35,7 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		write(2, "Usage: cp file_from file_to\n", 28);
+		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 28);
 		exit(97);
 	}
 	buffer = malloc(sizeof(buffer) * 1024);
@@ -51,14 +50,14 @@ int main(int ac, char **av)
 	do {
 		if (av1 == -1 || r == -1)
 		{
-			dprintf(2, "Error: Can't read from file %s\n", av[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 			free(buffer);
 			exit(98);
 		}
 		w = write(av2, buffer, r);
 		if (av2 == -1 || w == -1)
 		{
-			dprintf(2, "Error: Can't write to %s\n", av[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			free(buffer);
 			exit(99);
 		}
