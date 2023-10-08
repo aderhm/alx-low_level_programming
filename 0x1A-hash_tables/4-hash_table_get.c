@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - adds an element to the hash table.
+ * hash_table_get - gets an element from the hash table.
  * @ht: the hash table we want to look into.
  * @key: the key we're looking for.
  *
@@ -22,7 +22,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (item)
 	{
 		if (strcmp(item->key, key) == 0)
-            return (item->value);
+			return (item->value);
 	}
 
 	return (NULL);
