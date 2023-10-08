@@ -12,6 +12,9 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int i;
 	char *separator;
 
+	if (ht == NULL)
+		return;
+
 	separator = "";
 
 	printf("{");
