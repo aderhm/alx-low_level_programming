@@ -209,7 +209,7 @@ void shash_table_print(const shash_table_t *ht)
 	{
 		printf("%s'%s': '%s'", separator, item->key, item->value);
 		separator = ", ";
-		item = item->next;
+		item = item->snext;
 	}
 
 	printf("}\n");
@@ -226,7 +226,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 	shash_node_t *item;
 	char *separator;
 
-	if (ht == NULL)
+	if (!ht)
 		return;
 
 	separator = "";
@@ -238,7 +238,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 	{
 		printf("%s'%s': '%s'", separator, item->key, item->value);
 		separator = ", ";
-		item = item->next;
+		item = item->sprev;
 	}
 
 	printf("}\n");
